@@ -1,0 +1,44 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+					<h1 class="header">Burger App</h1>
+				</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 text-center" class="task">
+			<div class="row">
+			  {{#each burgers}}
+			  	{{#unless this.devoured}}
+				<div class="col-md-9 text-center">
+					<span class="burger-name">{{this.id}}. {{this.name}}</span>
+				</div>
+				<div class="col-md-3 text-center">
+					<form class="devour-form button-size">
+						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+						<button type="submit" class="btn btn-default">Eat!</button>
+					</form>
+				</div>
+				{{/unless}}
+			  {{/each}}
+			</div>
+		</div>
+		<div class="col-md-6 text-center" class="task">
+			  {{#each burgers}}
+			  	{{#if this.devoured}}
+			  		<input class="form-control burger-eaten" type="text" placeholder="{{this.id}} . {{this.name}}" readonly>
+				{{/if}}
+			  {{/each}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 text-center burger-form">
+			<form action="/burgers/" method="POST">
+				<input type="text" class="form-control entry-box" name="name" value="" id="enter_text">
+				<button type="submit" class="btn btn-secondary add-new-btn">Add New</button>
+			</form>
+		</div>
+	</div>
+</div>

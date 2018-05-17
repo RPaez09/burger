@@ -1,0 +1,30 @@
+h1.header {
+    text-align: center;
+    background-color: #262626;
+    color: #FFFFFF;
+    margin: 0 -15px;
+    padding: 10px;
+}
+
+span.burger-name {
+    display: block;
+    margin-top: 30px;
+    text-align: right;
+}
+
+.burger-form {
+    margin-top: 20px;
+}
+
+.burger-eaten {
+    margin-top: 25px;
+}
+
+.entry-box {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.add-new-btn {
+    margin-top: 20px;
+}
